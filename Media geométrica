@@ -1,0 +1,22 @@
+import math #importando para usar raiz quadrada
+
+L=[] # declarando a lista
+
+while True: #estrutura de loop
+    
+    entrada=int(input("Insira números a lista, insira -1 para encerrar a lista")) #entradas infinitas com condição de saída 
+    
+    if entrada == -1: #condição de saída
+        break
+
+    L.append(entrada)
+    
+maior=max(L)#maior numero da lista
+
+menor=min(L)#menor numero da lista
+
+print(f'Menor número da lista:  {menor}, Maior número da lista:  {maior}')
+
+media_geometrica = math.sqrt(maior * menor) #media geométrica feita aqui
+
+print(f"A média geométrica entre o maior e menor número da lista é: \n {media_geometrica}")
