@@ -1,5 +1,36 @@
-var=int(input("Insira um número inteiro maior que zero:  ")
+while True:
+    var=int(input("Insira um número inteiro maior que zero, para definir o número de elementos na lista: "))
 
-if var<0:
-  print("Número inválido")
-  quit()
+    num_list=[]
+
+    if var <= 0 :
+        print("Número inválido")
+        quit()
+    else:
+        for x in range (var):
+            num_add=int(input("Digite os números a serem guardados na lista"))
+    
+            num_list.append(num_add)
+
+        print(num_list)
+
+    while True:
+        print("Digite a opção desejada")
+        print("Digite '1' para somar todos os elementos da lista")
+        print("Digite '2' para tirar a média da lista")
+        print("Digite '3' para reiniciar o programa")
+        escolha = int(input("Digite a opção desejada: "))
+        if escolha<1 or escolha>3:
+            print("Opção Inválida")
+            continue
+        elif escolha==1:
+            resultado=sum(num_list)
+            print (f"O resultado da soma dos números da lista é: {resultado} ")
+            break
+        elif escolha==2:
+            resultado = sum(num_list)/var
+            print(f"O resultado da média dos números da lista é: {resultado} ")
+            break
+            print (f"O resultado da média dos números da lista é: {resultado} ")
+            break
+    continue
